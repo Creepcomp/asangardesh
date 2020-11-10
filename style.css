@@ -1,0 +1,142 @@
+@font-face {
+    font-family: BYekan;
+    src: url(fonts/BYekan.ttf);
+}
+
+body {
+    margin: 0;
+    direction: rtl;
+    font-family: BYekan;
+    background-image: url(images/background.jpg);
+}
+
+header {
+    background-color: rgba(0, 0, 0, .5);
+    transition: background-color .5s;
+}
+
+header:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+header #name {
+    color: white;
+    margin: 1%;
+}
+
+header #menu {
+    width: 80%;
+    list-style: none;
+}
+
+header #menu li {
+    display: inline;
+    margin: 5%;
+}
+
+header #menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+header #profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-image: url(images/noprofile.jpg);
+    background-size: cover;
+}
+
+header #name, #menu, #profile {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#profile_container {
+    position: absolute;
+    background-color: white;
+    border-radius: 5%;
+    border: solid 1px;
+}
+
+#body {
+    margin: 1%;
+}
+
+#body #image {
+    margin: auto;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+}
+
+#body #imageNote {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    width: 35%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+#body #imageNote h1 {
+    color: white;
+    margin: 1%;
+}
+
+#body #imageNote p {
+    color: white;
+    margin: 1%;
+}
+
+#body #imageCircles {
+    text-align: left;
+}
+
+#body #imageCircles span {
+    display: inline-block;
+    margin: 1%;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.earth {
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+  
+.earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+}
+  
+.earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 30s linear alternate infinite;
+    background: url(images/earth/day.jpg);
+    background-size: cover;
+}
+
+@keyframes spin {
+    to {
+        transform: translateX(50%);
+    }
+}
+  
