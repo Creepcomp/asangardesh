@@ -26,7 +26,7 @@ function initMap() {
     tehran.addListener("click", function(){
         content = document.getElementById('tehran');
         content.hidden = false;
-        content.style.right = mouseX + 'px';
+        content.style.right = window.innerWidth - mouseX + 'px';
         content.style.top = mouseY + 'px';
     });
 

@@ -1,5 +1,5 @@
 <?php
-    $username = 'Parsa';
+    include('global.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,36 +7,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/index.css">
     <script src="scripts/index.js"></script>
     <script src="scripts/global.js"></script>
     <title>آسان گردش</title>
 </head>
 <body>
-    <div id='profile_container' hidden>
-        نام کاربری: <?php echo $username; ?>
-    </div>
-    <header>
-        <h1 id="name">آسان گردش</h1>
-        <ul id='menu'>
-            <li>
-                <a href=".">خانه</a>
-            </li>
-            <li>
-                <a href="map.php">نقشه</a>
-            </li>
-            <li>
-                <a href="#">جوایز</a>
-            </li>
-            <li>
-                <a href="#">تماس با ما</a>
-            </li>
-            <li>
-                <a href="#">درباره ما</a>
-            </li>
-        </ul>
-        <div id="profile" onclick="showProfileContainer();"></div>
-    </header>
+    <?php include('htmls/header.html') ?>
     <div id='body'>
         <div id='image'>
             <div id='imageNote'>
